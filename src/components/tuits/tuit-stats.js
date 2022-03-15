@@ -9,15 +9,15 @@ export default class TuitStats extends React.Component {
       <div className="row mt-2">
         <div className="col">
           <i className="far fa-message"></i>
-          {this.props.tuit.stats.replies}
+          {this.props.tuit.stats && this.props.tuit.stats.replies}
         </div>
         <div className="col">
           <i className="far fa-retweet"></i>
-          {this.props.tuit.stats.retuits}
+          {this.props.tuit.stats && this.props.tuit.stats.retuits}
         </div>
         <div className="col">
           <i className="far fa-heart"></i>
-          {this.props.tuit.stats.likes}
+          {this.props.tuit.stats && this.props.tuit.stats.likes}
         </div>
         <div className="col">
           <i className="far fa-inbox-out"></i>

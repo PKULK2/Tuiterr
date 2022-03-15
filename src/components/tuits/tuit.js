@@ -2,7 +2,7 @@ import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
 
-const Tuit = ({tuit}) => {
+const Tuit = ({tuit, deleteTuit}) => {
   return(
     <li className="p-2 ttr-tuit list-group-item d-flex rounded-0">
       <div className="pe-2">
@@ -10,9 +10,10 @@ const Tuit = ({tuit}) => {
              className="ttr-tuit-avatar-logo rounded-circle"/>
       </div>
       <div>
+        <i onClick={() => deleteTuit(tuit._id)}/>
         <h2
-          className="fs-5">{tuit.username} @{tuit.handle} - {tuit.published}</h2>
-        {tuit.content}
+          className="fs-5">{tuit.postedBy.username} @{tuit.postedBy.username} - {tuit.published}</h2>
+            {tuit.tuit}
         {
           tuit.youtube &&
             <TuitVideo tuit={tuit}/>
