@@ -3,7 +3,7 @@ import {useLocation, Link} from "react-router-dom";
 
 function Index() {
   const location = useLocation();
-  console.log(location.pathname);
+  //console.log(location.pathname);
   const links = [
     {label: 'Tuiter', icon: 'fa-square-t', href: 'tuiter.html', path: '/tuiter'},
     {label: 'Home', icon: 'fa-home', href: 'home.html', path: '/home'},
@@ -14,7 +14,8 @@ function Index() {
     {label: 'Lists', icon: 'fa-list', href: 'lists.html', path: '/lists'},
     {label: 'Profile', icon: 'fa-user', href: 'profile.html', path: '/profile'},
     {label: 'More', icon: 'fa-circle-ellipsis', href: 'more.html', path: '/more'},
-      {label: 'Login', icon: 'fa-user', path: '/login'},
+    {label: 'Login', icon: 'fa-user', path: '/login'},
+    {label: 'Signup', icon: 'fa-user', path: '/signup'},
   ]
   return(
     <div className="ttr-navigation">
